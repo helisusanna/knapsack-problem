@@ -1,1 +1,4 @@
 # knapsack-problem
+## Python-kielinen Ahne-algoritmi (Greedy Algorithm) ratkaisee painotetun 0/1-reppuongelman
+Ohjelma saa syötteenä joukon S, jonka alkiot ovat 3-tuplia (a,b,c), missä a on objektin nimi, b kyseisen objektin toteuttamisesta saatava hyötyluku ja c kyseisen objektin painoluku (tai toteuttamisesta aiheutuva kustannus). Lisäksi syötteenä annetaan suurin sallittu kokonaispaino (tai kokonaisbudjetti). Algortimi käyttää prioriteettijonoa ja selvittää reppuun laitettavien objektien nimet, repun kokonaishyödyn sekä kustannukset/painon.  
+Node-sovellus käyttää tätä Python algoritmia, käyttöliittymä toteutettu EJS. Sovellus voisi toimia esimerkiki projektinhallinnan apuna auttamaan hankintojen tekemisessä. Käyttöliittymää tulisi jatkokehittää siten, että objekteja voisi lisätä tai poistaa. Nyt vakiona on neljä objektia.  
