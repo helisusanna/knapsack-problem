@@ -1,0 +1,69 @@
+<%- include("./header"); -%>
+    <div class="col-md-12 border-bottom border-dark bg-dark mb-5">
+        <form class="row g-3 bg-dark" method="POST" action="/laske/">
+            <div class="col-md-4 col-xs-12 mb-4">
+                <label for="budget" class="form-label text-white"><b>Budjetti tai maksimipaino</b></label>
+                <input type="number" class="form-control text-white bg-dark" id="budget" name="budget" value="<%=budget%>" required>
+            </div>
+            <div class="col-md-12 col-xs-12">
+                <table class="table table-dark table-hover">
+                    <thead>
+                        <tr>
+                            <th>Nimi tai muu tunniste</th>
+                            <th>Hyötyluku</th>
+                            <th>Kustannus tai paino</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input colspan="4" type="text" class="form-control text-white bg-dark" id="name1" name="name1" value="<%=name1%>" required></th>
+                            <td><input type="number" class="form-control text-white bg-dark" id="benefit1" name="benefit1" value="<%=benefit1%>" required></th>
+                            <td><input type="number" class="form-control text-white bg-dark" id="weight1" name="weight1" value="<%=weight1%>" required></th>
+                        </tr>
+                        <tr>
+                            <td><input colspan="4" type="text" class="form-control text-white bg-dark" id="name2" name="name2" value="<%=name2%>" required></th>
+                            <td><input type="number" class="form-control text-white bg-dark" id="benefit2" name="benefit2" value="<%=benefit2%>" required></th>
+                            <td><input type="number" class="form-control text-white bg-dark" id="weight2" name="weight2" value="<%=weight2%>" required></th>
+                        </tr>
+                        <tr>
+                            <td><input colspan="4" type="text" class="form-control text-white bg-dark" id="name3" name="name3" value="<%=name3%>" required></th>
+                            <td><input type="number" class="form-control text-white bg-dark" id="benefit3" name="benefit3" value="<%=benefit3%>" required></th>
+                            <td><input type="number" class="form-control text-white bg-dark" id="weight3" name="weight3" value="<%=weight3%>" required></th>
+                        </tr>
+                        <tr>
+                            <td><input colspan="8" type="text" class="form-control text-white bg-dark" id="name4" name="name4" value="<%=name4%>" required></th>
+                            <td><input type="number" class="form-control text-white bg-dark" id="benefit4" name="benefit4" value="<%=benefit4%>" required></th>
+                            <td><input type="number" class="form-control text-white bg-dark" id="weight4" name="weight4" value="<%=weight4%>" required></th>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="col-md-4 col-xs-12">
+                    <input type="submit" class="btn btn-lg btn-info btn-block mt-3" name="/laske/" value="Laske">
+                </div>
+            </div>
+        </form>
+    </div>
+        <%if(sisalto&&hyoty&&kustannus){%>
+        <div class="border rounded bg-dark m-3 p-5">
+            <h4 class="text-light border-bottom border-light">
+                Ratkaisu budjetille <%=budget%>
+            </h4>
+            <div class="col-xs-12 mt-5">
+                <p class="text-info"><b>Toteutettavat hankinnat: </b><span class="text-white"><%=sisalto%></span></p>
+                <p class="text-info"><b>Kokonaishyöty: </b><span class="text-white"><%=hyoty%></span></p>
+                <p class="text-info"><b>Kokonaiskustannukset tai paino: </b><span class="text-white"><%=kustannus%></span></p>
+            </div>
+        </div>
+        <%}%>
+        <%if(error){%>
+        <div class="col-xs-12 border border-danger rounded bg-dark mb-5">
+            <p class="text-white m-5">
+                <%=error%>
+            </p>
+        </div>
+        <%}%>
+
+<%- include("./footer") -%>
+
+
+
